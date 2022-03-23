@@ -3,7 +3,7 @@
 Groups HTTP Request Scripts
 
 ### create GROUP_COMPARE
-POST http://192.168.12.26:18080/am/userGroups/v1/group/compareContent-Type: application/json
+POST http://ip:port/am/userGroups/v1/group/compareContent-Type: application/json
 
 {
   "id"  :null ,
@@ -13,7 +13,7 @@ POST http://192.168.12.26:18080/am/userGroups/v1/group/compareContent-Type: appl
   "assessmentOrderIds": null
 }
 ### update GROUP_COMPARE
-POST http://192.168.12.26:8080/am/userGroups/v1/group/compareContent-Type: application/json
+POST http://ip:port/am/userGroups/v1/group/compareContent-Type: application/json
 
 {
   "id" : 599,
