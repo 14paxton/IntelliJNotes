@@ -158,6 +158,24 @@ working
 
 -XX:+UseCompressedOops
 -XX:-OmitStackTraceInFastThrow
+  
+ ## Custom JVM ARGS
+  Custom JVM args
+   set jvm args in build.gradle   bootRun{}
+     jvmArgs = ["-server",
+                 "-XX:ReservedCodeCacheSize=2g",
+                "-XX:NewRatio=3",
+                "-XX:ActiveProcessorCount=12",
+                "-Xss16m",
+                "-XX:+UseConcMarkSweepGC",
+                "-XX:+CMSParallelRemarkEnabled",
+                "-XX:ConcGCThreads=4",
+                "-XX:+AlwaysPreTouch",
+                "-XX:+TieredCompilation",
+                "-XX:+UseCompressedOops", "-Xdebug", "-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005", "-Xmx8g"]
+###    set remote connection
+  
+![Picture1](https://user-images.githubusercontent.com/26972590/159703039-67fe1a5f-8a7e-4555-b422-385b58d1ac51.png)
 
 
 
