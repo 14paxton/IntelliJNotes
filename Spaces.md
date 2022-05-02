@@ -8,18 +8,29 @@
       `sudo curl -i -H "Authorization: Bearer {token} -F author="{author}" -F description="jdk7Gzip" -F file=@"/Users/bpaxton/Downloads/depend.tar.gz" https://files.pkg.jetbrains.space/talentplus/p/tb-6/files/`
   7) open in ide from project in spaces, then save jdk to environment/client once opened    
   
-  8) ## add java file
+  8) add java file
+    a) ## use existing container copy files
+    
     `/usr/lib/jvm/java-7.0.232/bin# curl -f -L -H "Authorization: Bearer {token} -o /usr/lib/jvm/java-7.0.232.zip "https://files.pkg.jetbrains.space/talentplus/p/tb-6/files/7.0.232-zulu.zip"; `
     ` unzip java-7.0.232.zip; `
     `mv 7.0.232-zulu/ ./java-7.0.232; `
     `rm 7.0.232-zulu; `
     
-    8.b) ### alt add java file user docker imaage
+    b) ### alt add java file user docker imaage
+    
           `docker pull williamyeh/java7 `
           `docker run -it williamyeh/java7 bash`
           ` docker cp 123f5c6f5e1f:/usr/lib/jvm/java-7-oracle /usr/lib/jvm`
-          
-    8.c) ### Example for Java 7 using Ubuntu 14.04
+     
+    c) ### install yum
+    
+       -RUN yum -y install java-1.7.0-openjdk
+       -RUN yum -y install tar
+       -ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.231-2.6.19.1.amzn2.0.1.x86_64/jre
+       -ENV JAVA_VERSION 7u231
+       
+    d) ### Example for Java 7 using Ubuntu 14.04
+    
 Install Docker - Docker CE free version is fine. See for example https://docs.docker.com/install/linux/docker-ce/ubuntu/ or use the docker.io package in recent Ubuntu versions shipped.
 
 In an empty folder, create a file Dockerfile:
