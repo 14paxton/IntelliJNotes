@@ -8,7 +8,7 @@
       `sudo curl -i -H "Authorization: Bearer {token} -F author="{author}" -F description="jdk7Gzip" -F file=@"/Users/bpaxton/Downloads/depend.tar.gz" https://files.pkg.jetbrains.space/talentplus/p/tb-6/files/`
   7) open in ide from project in spaces, then save jdk to environment/client once opened    
   
-  8) add java file
+  8) add java file --- can check java ` update-alternatives --config java`
     a) ## use existing container copy files
     
     `/usr/lib/jvm/java-7.0.232/bin# curl -f -L -H "Authorization: Bearer {token} -o /usr/lib/jvm/java-7.0.232.zip "https://files.pkg.jetbrains.space/talentplus/p/tb-6/files/7.0.232-zulu.zip"; `
