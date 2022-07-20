@@ -5,7 +5,10 @@
   4) spin up 
   5) add jdk tar gz to packages in space
   6) use generated curl to upload 
-      `sudo curl -i -H "Authorization: Bearer {token} -F author="{author}" -F description="jdk7Gzip" -F file=@"/Users/bpaxton/Downloads/depend.tar.gz" https://files.pkg.jetbrains.space/talentplus/p/tb-6/files/`
+   ```bash
+   sudo curl -i -H "Authorization: Bearer {token} -F author="{author}" -F description="jdk7Gzip" -F file=@"/Users/bpaxton/Downloads/depend.tar.gz" https://files.pkg.jetbrains.space/talentplus/p/tb-6/files/
+   ```
+   
   7) open in ide from project in spaces, then save jdk to environment/client once opened    
   
   8) add java file --- can check java ` update-alternatives --config java`
@@ -18,9 +21,9 @@
     
     b) ### alt add java file user docker imaage
     
-          `docker pull williamyeh/java7 `
-          `docker run -it williamyeh/java7 bash`
-          ` docker cp 123f5c6f5e1f:/usr/lib/jvm/java-7-oracle /usr/lib/jvm`
+          docker pull williamyeh/java7 
+          docker run -it williamyeh/java7 bash
+          docker cp 123f5c6f5e1f:/usr/lib/jvm/java-7-oracle /usr/lib/jvm
      
     c) ### install yum
     
