@@ -1,6 +1,9 @@
-Run the command java -X and you will get a list of all -X options:
+Run the command 
+```java -X```
+and you will get a list of all -X options:
 
 C:\Users\Admin>java -X
+```yml
 -Xmixed           mixed mode execution (default)
 -Xint             interpreted mode execution only
 -Xbootclasspath:<directories and zip/jar files separated by ;>
@@ -30,13 +33,13 @@ C:\Users\Admin>java -X
 -XshowSettings:properties  show all property settings and continue
 -XshowSettings:locale      show all locale related settings and continue
 
-
+```
 
 
 
 
 ORIGINAL
-
+```yml
 -Xms128m
 -Xmx750m
 -XX:ReservedCodeCacheSize=240m
@@ -52,11 +55,11 @@ ORIGINAL
 -Djdk.attach.allowAttachSelf=true
 -Dkotlinx.coroutines.debug=off
 -Djdk.module.illegalAccess.silent=true
-
+```
 
 UPDATED- https://medium.com/stochastic-stories/tuning-my-intellij-ide-8255781f6a0d
 
-
+```yml
 -Xms15g
 -XX:ReservedCodeCacheSize=2g
 -XX:+UseCompressedOops
@@ -75,7 +78,7 @@ UPDATED- https://medium.com/stochastic-stories/tuning-my-intellij-ide-8255781f6a
 -Dkotlinx.coroutines.debug=off
 -Djdk.module.illegalAccess.silent=true
 
-
+```
 
 
 other custom settings http://tomaszdziurko.com/2015/11/1-and-the-only-one-to-customize-intellij-idea-memory-settings/
@@ -89,6 +92,7 @@ mklink /D "R:\Temp\intellij\index" "C:\Users\bpaxton\.IntelliJIdea2019.3\system\
 
 
 current
+```yml
 -server
 -Xms8g
 -Xmx8g
@@ -116,7 +120,7 @@ current
 -Dsun.io.useCanonCaches=false
 -XX:ReservedCodeCacheSize=512m
 -Didea.plugins.path=C:\\Users\\bpaxton\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\203.6682.168.plugins
-
+```
 
 
 
