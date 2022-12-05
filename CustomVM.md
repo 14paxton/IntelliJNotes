@@ -126,21 +126,23 @@ https://github.com/serpro69/config/blob/master/idea64.vmoptions#L36
 
 
 working
--ea
--server
--Xms8g
--Xmx8g
--Xss16m
--XX:MaxMetaspaceSize=2G
--XX:MetaspaceSize=512m
--XX:ConcGCThreads=6
--XX:ParallelGCThreads=6
--XX:NewRatio=3
--XX:ReservedCodeCacheSize=2g
--XX:+AlwaysPreTouch
--XX:+UseConcMarkSweepGC
--XX:+TieredCompilation
--Djava.net.preferIPv4Stack=true
+```yml
+  # custom IntelliJ IDEA VM options (expand/override 'bin/idea.vmoptions')
+ -ea
+ -server
+ -Xms6g
+ -Xmx6g
+ -Xss16m
+ -XX:MaxMetaspaceSize=2G
+ -XX:MetaspaceSize=512m
+ -XX:ConcGCThreads=6
+ -XX:ParallelGCThreads=6
+ -XX:NewRatio=3
+ -XX:ReservedCodeCacheSize=2g
+ -XX:+AlwaysPreTouch
+ -XX:+UseConcMarkSweepGC
+ -XX:+TieredCompilation
+ -Djava.net.preferIPv4Stack=true
 
 -XX:+UseCodeCacheFlushing
 -XX:+DisableExplicitGC
@@ -151,13 +153,13 @@ working
 -XX:+CMSParallelRemarkEnabled
 -XX:+UseAdaptiveGCBoundary
 
-
 -XX:+OptimizeStringConcat
 -XX:+UseStringCache
 -XX:+UseFastAccessorMethods
 
 -XX:+UseCompressedOops
 -XX:-OmitStackTraceInFastThrow
+```
   
  ## Custom JVM ARGS
   Custom JVM args
