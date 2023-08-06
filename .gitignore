@@ -75,32 +75,3 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-eof
-
-# make folder and file so wiki is autoupdated
-[[ ! -d "./.github/workflows/ " ]] && mkdir -p ./.github/workflows/
-
-cat << EOL >  ./.github/workflows/updatewiki.yml
----
-on:
-  push:
-    branches:
-      - "master"
-  pull_request:
-    branches:
-      - "master"
-name: Update Wiki
-jobs:
-  udpate-wiki:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Wiki Sync
-        uses: LillyWho/ghaction-wiki-sync-custom@v1.0
-        with:
-          username: 14paxton
-          access_token: ${{ secrets.SYNCTOKEN }}
-          wiki_folder: ${{ github.event.repository.name }}
-          commit_message: "wikisync"
-          commit_username: "14paxton"
-          commit_email:    "26972590+14paxton@users.noreply.github.com "
