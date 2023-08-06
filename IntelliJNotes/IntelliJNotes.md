@@ -1,10 +1,10 @@
 ---
-title:        IntelliJNotes
-layout:       default
-permalink:    IntelliJNotes/
-category:     IntelliJNotes
+title: IntelliJNotes
+layout: default
+permalink: IntelliJNotes/
+category: IntelliJNotes
 has_children: true
-share:        true
+share: true
 shortRepo:
 
   - intellijnotes

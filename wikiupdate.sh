@@ -1,7 +1,7 @@
 DIRNAME=$(basename "$(pwd)");
 SHORTREPOKEY=$(echo "$DIRNAME" | tr '[:upper:]' '[:lower:]');
-access_token='${{ secrets.SYNCTOKEN }}'
-wiki_folder='${{ github.event.repository.name }}'
+access_token='${{ secrets.SYNCTOKEN }}';
+wiki_folder='${{ github.event.repository.name }}';
 
 if [[ ! $(grep -R "idea" .gitignore ) ]] then;
 cat << EOL > .gitignore
@@ -82,7 +82,9 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-eof
+EOL
+fi
+
 
 # make folder and file so wiki is autoupdated
 [[ ! -d "./.github/workflows/ " ]] && mkdir -p ./.github/workflows/
@@ -112,7 +114,6 @@ jobs:
           commit_username: "14paxton"
           commit_email:    "26972590+14paxton@users.noreply.github.com "
 EOL
-fi
 
 # make folder for wiki to update from and move markdown files to new folder
 [[ -d ./wiki/ ]] && mv wiki "$DIRNAME"
@@ -148,8 +149,8 @@ EOL
 for st in $(find "$(PWD)" -type f); do
 FILENAME=${$(basename "$st")%.*}
 PERMALINK=$DIRNAME/$FILENAME
-if [[ "$FILENAME" != "$DIRNAME" && ! $(grep -R "has_children" "$FILENAME".md) ]] then;
 
+if [[ "$FILENAME" != "$DIRNAME" && ! $(grep -R "has_children" "$FILENAME".md) ]] then;
 ex "$st" << eof
 1 insert
 ---
